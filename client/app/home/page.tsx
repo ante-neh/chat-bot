@@ -1,6 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import { useSendMessageMutation } from '../GlobalRedux/apiSlice';
+import { useSearchAssistanceMutation } from '../GlobalRedux/apiSlice';
 
 export default function Home() {
   const [messages, setMessages] = useState([
@@ -8,7 +8,7 @@ export default function Home() {
   ]);
   const [userInput, setUserInput] = useState('');
 
-  const [sendMessage, { isLoading }] = useSendMessageMutation();
+  const [sendMessage, { isLoading }] = useSearchAssistanceMutation();
 
   // Create a ref for the bottom of the messages container
   const messagesEndRef = useRef<HTMLDivElement>(null);
